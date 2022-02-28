@@ -26,8 +26,8 @@ body {
   grid-row: 1;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 10fr;
-  height: 800px;
+  grid-template-rows: 1fr 9fr;
+  height: 500px;
 }
 .menu {
   grid-row: 1;
@@ -36,7 +36,16 @@ body {
 .nom {
   grid-row: 2;
 }
-
+.imgcont {
+  height: 200px;
+  width: 300px;
+  /* clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); */
+}
+.yo {
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
+}
 .pantalla {
   grid-row: 2;
   background-color: #127369;
