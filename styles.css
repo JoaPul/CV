@@ -1,0 +1,43 @@
+/* .N-I-S-H-I-K-I-G-O---Furniture-Design-Award-2014-1-hex { color: #127369; }
+.N-I-S-H-I-K-I-G-O---Furniture-Design-Award-2014-2-hex { color: #10403B; }
+.N-I-S-H-I-K-I-G-O---Furniture-Design-Award-2014-3-hex { color: #8AA6A3; }
+.N-I-S-H-I-K-I-G-O---Furniture-Design-Award-2014-4-hex { color: #4C5958; }
+.N-I-S-H-I-K-I-G-O---Furniture-Design-Award-2014-5-hex { color: #BFBFBF; } */
+* {
+  margin: 0px;
+  padding: opx;
+}
+body {
+  background-color: #10403b;
+}
+.All {
+  height: 100%;
+  width: 100%;
+  background-color: #10403b;
+}
+.todo {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr;
+  height: 100%;
+  width: 100%;
+}
+.header {
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 10fr;
+  height: 800px;
+}
+.menu {
+  grid-row: 1;
+  border-bottom: 5px solid #4c5958;
+}
+.nom {
+  grid-row: 2;
+}
+
+.pantalla {
+  grid-row: 2;
+  background-color: #127369;
+}
