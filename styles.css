@@ -5,45 +5,50 @@
 .N-I-S-H-I-K-I-G-O---Furniture-Design-Award-2014-5-hex { color: #BFBFBF; } */
 * {
   margin: 0px;
-  padding: opx;
+  padding: 0px;
+  height: 100%;
 }
+/*COLOR DE FONDO EN PAGINA*/
 body {
-  background-color: #10403b;
-}
-.All {
-  height: 100%;
-  width: 100%;
-  background-color: #10403b;
-}
-.todo {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 3fr;
-  height: 100%;
-  width: 100%;
-}
-.header {
-  grid-row: 1;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 9fr;
-  height: 500px;
-}
-.contme {
+  background-color: #127369;
   display: flex;
-  justify-content: center;
   align-items: center;
   align-content: center;
 }
-.menu {
-  grid-row: 1;
-  /* border: 5px solid #8aa6a3; */
-  border-radius: 30px 30px 30px 30px;
-  height: 80%;
-  width: 80%;
+/*CONTENEDOR DE TODO*/
+.todo {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-content: center;
 }
+
+/*CONTENEDOR DE LO QUE SE DESPLIEGA EN PANTALLA*/
+.pantalla {
+  background-color: #127369;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+/*NOMBRE CON FOTO*/
+.header {
+  height: 500px;
+  width: fit-content;
+  background-color: #10403b;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 30px;
+  border: 8px solid white;
+}
+
+/*CONTENEDOR DE NOMBRE Y FOTO*/
 .nom {
-  grid-row: 2;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 4fr 1fr;
@@ -55,6 +60,8 @@ body {
   align-content: center;
   justify-content: center;
 }
+
+/*CONTENEDOR FOTO*/
 .imgcont {
   height: 310px;
   width: 310px;
@@ -65,19 +72,19 @@ body {
   justify-content: center;
   /* clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); */
 }
+
+/*FOTO*/
 .yo {
   height: inherit;
   width: inherit;
   object-fit: cover;
   border-radius: 50%;
-  /* border: 8px solid #8aa6a3; */
+  border: 8px solid white;
 }
-.pantalla {
-  grid-row: 2;
-  background-color: #127369;
-}
+/*NOMBRE*/
 .nombre {
   font-family: "Fredoka", sans-serif;
   font-size: 50px;
   color: white;
+  padding: 10px;
 }
