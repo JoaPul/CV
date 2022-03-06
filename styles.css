@@ -37,7 +37,7 @@ body {
 }
 .menu {
   grid-row: 1;
-  border: 5px solid #8aa6a3;
+  /* border: 5px solid #8aa6a3; */
   border-radius: 30px 30px 30px 30px;
   height: 80%;
   width: 80%;
@@ -60,6 +60,9 @@ body {
   width: 310px;
   display: flex;
   align-items: flex-end;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   /* clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); */
 }
 .yo {
@@ -67,14 +70,14 @@ body {
   width: inherit;
   object-fit: cover;
   border-radius: 50%;
-  border: 8px solid #8aa6a3;
+  /* border: 8px solid #8aa6a3; */
 }
 .pantalla {
   grid-row: 2;
   background-color: #127369;
 }
 .nombre {
-  font-family: Arial;
+  font-family: "Fredoka", sans-serif;
   font-size: 50px;
-  color: #bfbfbf;
+  color: white;
 }
