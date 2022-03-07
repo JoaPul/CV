@@ -130,9 +130,9 @@ const InicioHMI = () => {
     `
     background-color: #0d574f;
     border: 5px solid #bfbfbf;
-    transition-property: background-color, border;
-    transition-duration: 2s, 1s;
-  }
+    box-shadow: 8px 8px 8px black,-8px -8px 8px gray;
+    transition-property: background-color, border,box-shadow;
+    transition-duration: 2s, 1s, 1s;
   `
   );
 };
@@ -143,8 +143,10 @@ const InicioHMO = () => {
     `
   border: 5px solid white; 
   background-color: #127369; 
-  transition-property: background-color, border; 
-  transition-duration: 2s, 1s;`
+  box-shadow: 0px 0px 0px black,0px 0px 0px gray;
+  transition-property: background-color, border,box-shadow;
+  transition-duration: 2s, 1s, 1s;
+  `
   );
 };
 
@@ -154,9 +156,10 @@ const perf1HMI = () => {
     "style",
     `
     box-shadow: 8px 8px 8px black,-8px -8px 8px gray;
-    border: 8px solid #bfbfbf;
-    transition-property: border, box-shadow;
-    transition-duration: 2s, 1s,;
+    border: 8px solid white;
+    background-color:#0f4d46;
+    transition-property: border, box-shadow, background-color;
+    transition-duration: 2s, 1s, 1s;
   `
   );
 };
@@ -166,8 +169,9 @@ const perf1HMO = () => {
     `
     box-shadow: 0px 0px 0px black, 0px 0px 0px gray;
     border: 0px solid #bfbfbf;
-    transition-property: border, box-shadow;
-    transition-duration: 2s, 1s,;
+    background-color: #127369;
+    transition-property: border, box-shadow, background-color;
+    transition-duration: 2s, 1s, 1s;
   `
   );
 };
@@ -176,9 +180,10 @@ const perf2HMI = () => {
     "style",
     `
     box-shadow: 8px 8px 8px black,-8px -8px 8px gray;
-    border: 8px solid #bfbfbf;
-    transition-property: border, box-shadow;
-    transition-duration: 2s, 1s,;
+    border: 8px solid white;
+    background-color:#0f4d46;
+    transition-property: border, box-shadow, background-color;
+    transition-duration: 2s, 1s, 1s;
   `
   );
 };
@@ -188,8 +193,9 @@ const perf2HMO = () => {
     `
     box-shadow: 0px 0px 0px black, 0px 0px 0px gray;
     border: 0px solid #bfbfbf;
-    transition-property: border, box-shadow;
-    transition-duration: 2s, 1s,;
+    background-color: #127369;
+    transition-property: border, box-shadow, background-color;
+    transition-duration: 2s, 1s, 1s;
   `
   );
 };
