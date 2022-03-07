@@ -2,18 +2,19 @@
 const HMI = () => {
   document.getElementById("style").innerHTML = `
     .header {
-        border: 8px solid #4C5958;
-        background-color: #8AA6A3;
-        transition-property: background-color, border;
-        transition-duration: 2s, 1s;
+        border: 8px solid white;
+        background-color: #0f4d46;
+        box-shadow: 8px 8px 8px black,-8px -8px 8px gray;
+        transition-property: background-color, border, box-shadow;
+        transition-duration: 2s, 1s, 1s;
       }
       .header .yo {
-        border: 8px solid #4C5958;
+        border: 8px solid white;
         transition-property: border;
         transition-duration: 1s;
       }
       .nombre {
-        color: #4C5958;
+        color: white;
         transition-property: color;
         transition-duration: 1s;
       }
@@ -23,17 +24,17 @@ const HMI = () => {
 const HMO = () => {
   document.getElementById("style").innerHTML = `
     .header {
-        border: 8px solid white;
-        transition-property: background-color, border;
-        transition-duration: 3s, 2s;
+        border: 8px solid #bfbfbf;
+        transition-property: background-color, border, box-shadow, height;
+    transition-duration: 2s, 1s, 1s, 1s;
       }
       .header .yo {
-        border: 8px solid white;
-        transition-property: border;
+        border: 8px solid #bfbfbf;
+        
         transition-duration: 2s;
       }
       .nombre {
-        color: white;
+        color: #bfbfbf;
         transition-property: color;
         transition-duration: 2s;
       }
@@ -45,29 +46,49 @@ const perf = () => {
     -se agregan las opciones de perfiles
     -Cambiar de tamaño a header*/
 
-  document.getElementById("perf").innerHTML = `
-    <div class="perf1" id="perf1">
-      <h1 class="p1h1" id="p1h1">Mecánico y Eléctrico</h1>
-    </div>
-    <div class="perf2" id="perf2">
+  document.getElementById("perf1").innerHTML = `
+      <h1 class="p1h1" id="p1h1">Mecánico y Eléctrico</h1>`;
+  document.getElementById("perf2").innerHTML = `
       <h1 class="p2h1" id="p2h1">Web Developer</h1>
-    </div>
   `;
 
   document.getElementById("style").innerHTML = `
   .header {
-    border: 8px solid #4C5958;
-    background-color: #8AA6A3;
+    border: 8px solid white;
+    background-color: #0f4d46;
+    box-shadow: 8px 8px 8px black,-8px -8px 8px gray;
     height:550px;
+    transition-property: background-color, border, box-shadow, height;
+    transition-duration: 2s, 1s, 1s, 1s;
   }
   .header .yo {
-    border: 8px solid #4C5958;
+    border: 8px solid white;
+    transition-property: border;
+    transition-duration: 1s;
   }
   .nombre {
-    color: #4C5958;
+    color: white;
+    transition-property: color;
+    transition-duration: 1s;
+    display:flex;
+    align-content:center;
+    justify-content:center;
+    align-items:center;
+    
   }
   .perf{
-    height: 100px;
+    height: 120px;
+  }
+  .perf1, .perf2{
+    height:70px;
+    display:flex;
+    align-content:center;
+    justify-content:center;
+    align-items:center;
+    border-radius: 30px;
+  }
+  .p1h1,.p2h1{
+    height:fit-content;
   }
   `;
 
@@ -78,8 +99,25 @@ const perf = () => {
 
 //CAMBIO DE COLOR AL BOTON DE REGREASAR
 const Inicio = () => {
-  document.getElementById("perf").innerHTML = ``;
+  document.getElementById("perf1").innerHTML = ``;
+  document.getElementById("perf2").innerHTML = ``;
   HMO();
+
+  //LIMPIAMOS LOS BOTONES DE LOS PERFILES
+  document.getElementById("perf1").setAttribute(
+    "style",
+    `
+    box-shadow: 0px 0px 0px black,0px 0px 0px gray;
+    border: 0px solid #bfbfbf;
+  `
+  );
+  document.getElementById("perf2").setAttribute(
+    "style",
+    `
+    box-shadow: 0px 0px 0px black,0px 0px 0px gray;
+    border: 0px solid #bfbfbf;
+  `
+  );
 
   //CAMBIO DE ACCION CUANDO SE PASA EL MOUSE
   document.getElementById("header").setAttribute("onmouseover", "HMI()");
@@ -91,7 +129,7 @@ const InicioHMI = () => {
     "style",
     `
     background-color: #0d574f;
-    border: 5px solid #afd3cf;
+    border: 5px solid #bfbfbf;
     transition-property: background-color, border;
     transition-duration: 2s, 1s;
   }
@@ -100,5 +138,58 @@ const InicioHMI = () => {
 };
 
 const InicioHMO = () => {
-  document.getElementById("regre").setAttribute("style", "border: 5px solid #8aa6a3; background-color: #127369; transition-property: background-color, border; transition-duration: 2s, 1s;");
+  document.getElementById("regre").setAttribute(
+    "style",
+    `
+  border: 5px solid white; 
+  background-color: #127369; 
+  transition-property: background-color, border; 
+  transition-duration: 2s, 1s;`
+  );
+};
+
+//BOTONES DE PERFILES
+const perf1HMI = () => {
+  document.getElementById("perf1").setAttribute(
+    "style",
+    `
+    box-shadow: 8px 8px 8px black,-8px -8px 8px gray;
+    border: 8px solid #bfbfbf;
+    transition-property: border, box-shadow;
+    transition-duration: 2s, 1s,;
+  `
+  );
+};
+const perf1HMO = () => {
+  document.getElementById("perf1").setAttribute(
+    "style",
+    `
+    box-shadow: 0px 0px 0px black, 0px 0px 0px gray;
+    border: 0px solid #bfbfbf;
+    transition-property: border, box-shadow;
+    transition-duration: 2s, 1s,;
+  `
+  );
+};
+const perf2HMI = () => {
+  document.getElementById("perf2").setAttribute(
+    "style",
+    `
+    box-shadow: 8px 8px 8px black,-8px -8px 8px gray;
+    border: 8px solid #bfbfbf;
+    transition-property: border, box-shadow;
+    transition-duration: 2s, 1s,;
+  `
+  );
+};
+const perf2HMO = () => {
+  document.getElementById("perf2").setAttribute(
+    "style",
+    `
+    box-shadow: 0px 0px 0px black, 0px 0px 0px gray;
+    border: 0px solid #bfbfbf;
+    transition-property: border, box-shadow;
+    transition-duration: 2s, 1s,;
+  `
+  );
 };

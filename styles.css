@@ -50,13 +50,14 @@ body {
   align-content: center;
   justify-content: center;
   border-radius: 50%;
-  border: 5px solid #8aa6a3;
+  border: 5px solid #bfbfbf;
 }
 .flecha {
   height: 30px;
   width: 30px;
   filter: invert(59%) sepia(9%) saturate(233%) hue-rotate(67deg) brightness(108%) contrast(82%);
 }
+
 /*contenedor NOMBRE CON FOTO*/
 .header {
   height: 500px;
@@ -101,13 +102,13 @@ body {
   width: inherit;
   object-fit: cover;
   border-radius: 50%;
-  border: 8px solid white;
+  border: 8px solid #bfbfbf;
 }
 /*NOMBRE*/
 .nombre {
   font-family: "Fredoka", sans-serif;
   font-size: 50px;
-  color: white;
+  color: #bfbfbf;
   display: border-box;
   padding: 10px;
 }
@@ -123,12 +124,11 @@ body {
 }
 .perf1,
 .perf2 {
-  border: 8px solid #4c5958;
-  border-radius: 30px;
-  background-color: #8aa6a3;
-  /* transition-property: background-color, border;
-  transition-duration: 3s, 2s; */
-  color: #4c5958;
+  background-color: #127369;
+  /* background-color:#8AA6A3; */
+  transition-property: background-color, border;
+  transition-duration: 2s, 1s;
+  color: white;
   font-family: "Fredoka", sans-serif;
   text-align: center;
   height: fit-content;
