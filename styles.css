@@ -19,13 +19,11 @@ body {
 .todo {
   height: 100%;
   width: 100%;
-  display: flex;
-  align-content: center;
 }
 
 /*CONTENEDOR DE LO QUE SE DESPLIEGA EN PANTALLA*/
 .pantalla {
-  background-color: #127369;
+  background-color: #10403b;
   display: flex;
   align-items: center;
   align-content: center;
@@ -34,16 +32,36 @@ body {
   height: 100%;
   min-height: 100%;
 }
+
+/*BOTON PARA REGRESAR A PANTALLA INICIAL*/
+.regre {
+  float: left;
+  position: relative;
+  position: sticky;
+  top: 20px;
+  left: 20px;
+  background-color: #127369;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.flecha {
+  filter: invert(59%) sepia(9%) saturate(233%) hue-rotate(67deg) brightness(108%) contrast(82%);
+}
+
 /*contenedor NOMBRE CON FOTO*/
 .header {
   height: 500px;
   width: fit-content;
-  background-color: #10403b;
+  background-color: #127369;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-content: center;
   border-radius: 30px;
-  border: 8px solid #bfbfbf;
+  /* border: 8px solid #bfbfbf; */
 }
 
 /*CONTENEDOR DE NOMBRE Y FOTO*/
@@ -85,5 +103,29 @@ body {
   font-family: "Fredoka", sans-serif;
   font-size: 50px;
   color: white;
+  display: border-box;
   padding: 10px;
+}
+
+/*PERFILES PROF*/
+.perf {
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 0px;
+}
+.perf1,
+.perf2 {
+  border: 8px solid #4c5958;
+  border-radius: 30px;
+  background-color: #8aa6a3;
+  /* transition-property: background-color, border;
+  transition-duration: 3s, 2s; */
+  color: #4c5958;
+  font-family: "Fredoka", sans-serif;
+  text-align: center;
+  height: fit-content;
+  width: 40%;
 }

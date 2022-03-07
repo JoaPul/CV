@@ -13,8 +13,11 @@
   </head>
   <body>
     <section class="todo" id="todo">
+      <div class="regre" id="regre">
+        <img src="./assets/arrow-90deg-left.svg" alt="go back" class="flecha" id="flecha" />
+      </div>
       <div class="pantalla" id="pantalla">
-        <div class="header" id="header" onmouseover="HMI()" onmouseout="HMO()">
+        <div class="header" id="header" onmouseover="HMI()" onmouseout="HMO()" onclick="perf()">
           <div class="nom" id="nom">
             <div class="cent1" id="cent1">
               <div class="imgcont" id="imgcont">
@@ -25,7 +28,9 @@
               <h1 class="nombre" id="nombre">JOAQUIN ARROYO</h1>
             </div>
           </div>
+          <div class="perf" id="perf"></div>
         </div>
+        <div class="sections" id="sections"></div>
       </div>
     </section>
     <style type="text/css" id="style"></style>
