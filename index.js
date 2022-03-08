@@ -130,7 +130,7 @@ const InicioHMI = () => {
     `
     background-color: #0d574f;
     border: 5px solid #bfbfbf;
-    box-shadow: 8px 8px 8px black,-8px -8px 8px gray;
+    box-shadow: 4px 4px 4px black,-4px -4px 4px gray;
     transition-property: background-color, border,box-shadow;
     transition-duration: 2s, 1s, 1s;
   `
@@ -155,7 +155,7 @@ const perf1HMI = () => {
   document.getElementById("perf1").setAttribute(
     "style",
     `
-    box-shadow: 8px 8px 8px black,-8px -8px 8px gray;
+    box-shadow: 5px 5px 5px black,-5px -5px 5px gray;
     border: 8px solid white;
     background-color:#0f4d46;
     transition-property: border, box-shadow, background-color;
@@ -179,7 +179,7 @@ const perf2HMI = () => {
   document.getElementById("perf2").setAttribute(
     "style",
     `
-    box-shadow: 8px 8px 8px black,-8px -8px 8px gray;
+    box-shadow: 5px 5px 5px black,-5px -5px 5px gray;
     border: 8px solid white;
     background-color:#0f4d46;
     transition-property: border, box-shadow, background-color;
