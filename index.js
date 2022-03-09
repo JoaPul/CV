@@ -199,3 +199,5 @@ const perf2HMO = () => {
   `
   );
 };
+
+const IME = () => {};
