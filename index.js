@@ -86,6 +86,7 @@ const perf = () => {
     justify-content:center;
     align-items:center;
     border-radius: 30px;
+    border:1px solid white;
   }
   .p1h1,.p2h1{
     height:fit-content;
@@ -118,6 +119,51 @@ const Inicio = () => {
     border: 0px solid #bfbfbf;
   `
   );
+
+  //LIMPIAR PANTALLA Y LOS DIV QUE HAY DENTRO DE PANTALLA
+  //contenedor HEADER
+  document.getElementById("pantalla").setAttribute(
+    "style",
+    `
+  background-color: #10403b;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  `
+  );
+  document.getElementById("header").setAttribute(
+    "style",
+    `
+    margin-top:0px;
+  `
+  );
+  document.getElementById("imgcont").setAttribute(
+    "style",
+    `
+    height: 310px;
+    width: 310px;
+    transition-property: height,width;
+    transition-duration: 2s, 2s;
+  `
+  );
+  document.getElementById("cent1").setAttribute("style", "flex-direction: rows;");
+  document.getElementById("contac").innerHTML = ``;
+  document.getElementById("exp/proj").innerHTML = ``;
+  document.getElementById("personal").innerHTML = ``;
+  document.getElementById("ski/too").innerHTML = ``;
+  document.getElementById("edu/cur").innerHTML = ``;
+  document.getElementById("Certi").innerHTML = ``;
+
+  document.getElementById("contac").setAttribute("style", "");
+  document.getElementById("exp/proj").setAttribute("style", "");
+  document.getElementById("personal").setAttribute("style", "");
+  document.getElementById("ski/too").setAttribute("style", "");
+  document.getElementById("edu/cur").setAttribute("style", "");
+  document.getElementById("Certi").setAttribute("style", "");
 
   //CAMBIO DE ACCION CUANDO SE PASA EL MOUSE
   document.getElementById("header").setAttribute("onmouseover", "HMI()");
@@ -168,7 +214,7 @@ const perf1HMO = () => {
     "style",
     `
     box-shadow: 0px 0px 0px black, 0px 0px 0px gray;
-    border: 0px solid #bfbfbf;
+    border:1px solid white;
     background-color: #127369;
     transition-property: border, box-shadow, background-color;
     transition-duration: 2s, 1s, 1s;
@@ -192,7 +238,7 @@ const perf2HMO = () => {
     "style",
     `
     box-shadow: 0px 0px 0px black, 0px 0px 0px gray;
-    border: 0px solid #bfbfbf;
+    border:1px solid white;
     background-color: #127369;
     transition-property: border, box-shadow, background-color;
     transition-duration: 2s, 1s, 1s;
@@ -200,4 +246,57 @@ const perf2HMO = () => {
   );
 };
 
-const IME = () => {};
+const IME = () => {
+  //HACER GRID EN PANTALLA
+  document.getElementById("pantalla").setAttribute(
+    "style",
+    `
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:repeat(5,1fr);
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    gap:10px;
+    transition-property: display;
+    transition-duration: 3s;
+  `
+  );
+  //TENER MARGIN EN header
+  document.getElementById("header").setAttribute(
+    "style",
+    `
+    margin-top:30px;
+    background-color: #127369;
+  `
+  );
+  //CAMBIAR TAMAÑO DE FOTO
+  document.getElementById("imgcont").setAttribute(
+    "style",
+    `
+    height: 250px;
+    width: 250px;
+    transition-property: height,width;
+    transition-duration: 2s,2s;
+  `
+  );
+  //Ajustacion de .cent1
+  document.getElementById("cent1").setAttribute("style", "flex-direction: column; align-content:space-around;");
+
+  //PONER INFORMACION DE CONTACTO
+  document.getElementById("contac").innerHTML = `
+    <h3 class="phone" id="phone" style="height:auto; width:auto; color:#bfbfbf; font-family:'Fredoka', sans-serif; font-size: 20px;">Teléfono: 3334958816</h3>
+    <h3 class="mail" id="mail" style="height:auto; width:auto; color:#bfbfbf; font-family:'Fredoka', sans-serif; font-size: 20px;">E-mail: joaquinarroyo@outlook.com</h3>
+  `;
+  document.getElementById("contac").setAttribute(
+    "style",
+    `
+  height:auto; 
+  width:auto; 
+  margin-top:20px;
+  transition-property: height,width;
+    transition-duration: 2s,2s;
+  `
+  );
+};
