@@ -282,7 +282,7 @@ const IME = () => {
   `
   );
   //Ajustacion de .cent1
-  document.getElementById("cent1").setAttribute("style", "flex-direction: column; align-content:space-around;");
+  document.getElementById("cent1").setAttribute("style", "flex-direction: column;justify-content:space-around; ");
 
   //PONER INFORMACION DE CONTACTO
   document.getElementById("contac").innerHTML = `
@@ -294,9 +294,10 @@ const IME = () => {
     `
   height:auto; 
   width:auto; 
-  margin-top:20px;
+  margin-top:0px;
   transition-property: height,width;
     transition-duration: 2s,2s;
+    
   `
   );
 };
