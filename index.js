@@ -215,7 +215,7 @@ const perf1HMO = () => {
     `
     box-shadow: 0px 0px 0px black, 0px 0px 0px gray;
     border:1px solid white;
-    background-color: #127369;
+    background-color: #8AA6A3;
     transition-property: border, box-shadow, background-color;
     transition-duration: 2s, 1s, 1s;
   `
@@ -239,7 +239,7 @@ const perf2HMO = () => {
     `
     box-shadow: 0px 0px 0px black, 0px 0px 0px gray;
     border:1px solid white;
-    background-color: #127369;
+    background-color: #8AA6A3;
     transition-property: border, box-shadow, background-color;
     transition-duration: 2s, 1s, 1s;
   `
@@ -286,16 +286,18 @@ const IME = () => {
 
   //PONER INFORMACION DE CONTACTO
   document.getElementById("contac").innerHTML = `
-    <h3 class="phone" id="phone" style="height:auto; width:auto; color:#bfbfbf; font-family:'Fredoka', sans-serif; font-size: 20px;">Teléfono: 3334958816</h3>
-    <h3 class="mail" id="mail" style="height:auto; width:auto; color:#bfbfbf; font-family:'Fredoka', sans-serif; font-size: 20px;">E-mail: joaquinarroyo@outlook.com</h3>
+    <h3 class="phone" id="phone" style="height:auto; width:auto; color:white; font-family:'Fredoka', sans-serif; font-size: 20px; margin-top:10px;">3334958816</h3>
+    <h3 class="mail" id="mail" style="height:auto; width:auto; color:white; font-family:'Fredoka', sans-serif; font-size: 20px;margin-left:10px; margin-right:10px; margin-bottom:10px;">joaquinarroyo@outlook.com</h3>
   `;
   document.getElementById("contac").setAttribute(
     "style",
     `
-  height:auto; 
-  width:auto; 
-  margin-top:0px;
-  transition-property: height,width;
+    background-color:#8AA6A3;
+    border-radius:20px;
+    height:auto; 
+    width:auto; 
+    margin-top:0px;
+    transition-property: height,width;
     transition-duration: 2s,2s;
     
   `
