@@ -45,6 +45,10 @@ const perf = () => {
   /*-Cambiar de tamaño la foto de perfil
     -se agregan las opciones de perfiles
     -Cambiar de tamaño a header*/
+  document.getElementById("perf").innerHTML = `
+  <div class="perf1" id="perf1" onmouseover="perf1HMI()" onmouseout="perf1HMO()" onclick="IME()"></div>
+  <div class="perf2" id="perf2" onmouseover="perf2HMI()" onmouseout="perf2HMO()" onclick="WD()"></div>
+  `;
 
   document.getElementById("perf1").innerHTML = `
       <h1 class="p1h1" id="p1h1">Mecánico y Eléctrico</h1>`;
@@ -100,25 +104,9 @@ const perf = () => {
 
 //CAMBIO DE COLOR AL BOTON DE REGREASAR
 const Inicio = () => {
-  document.getElementById("perf1").innerHTML = ``;
-  document.getElementById("perf2").innerHTML = ``;
+  document.getElementById("perf").innerHTML = ``;
+  // document.getElementById("perf2").innerHTML = ``;
   HMO();
-
-  //LIMPIAMOS LOS BOTONES DE LOS PERFILES
-  document.getElementById("perf1").setAttribute(
-    "style",
-    `
-    box-shadow: 0px 0px 0px black,0px 0px 0px gray;
-    border: 0px solid #bfbfbf;
-  `
-  );
-  document.getElementById("perf2").setAttribute(
-    "style",
-    `
-    box-shadow: 0px 0px 0px black,0px 0px 0px gray;
-    border: 0px solid #bfbfbf;
-  `
-  );
 
   //LIMPIAR PANTALLA Y LOS DIV QUE HAY DENTRO DE PANTALLA
   //contenedor HEADER
@@ -202,7 +190,7 @@ const perf1HMI = () => {
     "style",
     `
     box-shadow: 5px 5px 5px black,-5px -5px 5px gray;
-    border: 8px solid white;
+    border: 5px solid white;
     background-color:#0f4d46;
     transition-property: border, box-shadow, background-color;
     transition-duration: 2s, 1s, 1s;
@@ -226,7 +214,7 @@ const perf2HMI = () => {
     "style",
     `
     box-shadow: 5px 5px 5px black,-5px -5px 5px gray;
-    border: 8px solid white;
+    border: 5px solid white;
     background-color:#0f4d46;
     transition-property: border, box-shadow, background-color;
     transition-duration: 2s, 1s, 1s;
@@ -275,31 +263,61 @@ const IME = () => {
   document.getElementById("imgcont").setAttribute(
     "style",
     `
-    height: 250px;
-    width: 250px;
+    height: 280px;
+    width: 280px;
     transition-property: height,width;
     transition-duration: 2s,2s;
   `
   );
   //Ajustacion de .cent1
-  document.getElementById("cent1").setAttribute("style", "flex-direction: column;justify-content:space-around; ");
+  // document.getElementById("cent1").setAttribute("style", "flex-direction: column;justify-content:space-around; ");
 
   //PONER INFORMACION DE CONTACTO
-  document.getElementById("contac").innerHTML = `
-    <h3 class="phone" id="phone" style="height:auto; width:auto; color:white; font-family:'Fredoka', sans-serif; font-size: 20px; margin-top:10px;">3334958816</h3>
-    <h3 class="mail" id="mail" style="height:auto; width:auto; color:white; font-family:'Fredoka', sans-serif; font-size: 20px;margin-left:10px; margin-right:10px; margin-bottom:10px;">joaquinarroyo@outlook.com</h3>
-  `;
-  document.getElementById("contac").setAttribute(
+  // document.getElementById("contac").innerHTML = `
+  //   <h3 class="phone" id="phone" style="height:auto; width:auto; color:white; font-family:'Fredoka', sans-serif; font-size: 20px; margin-top:10px;">3334958816</h3>
+  //   <h3 class="mail" id="mail" style="height:auto; width:auto; color:white; font-family:'Fredoka', sans-serif; font-size: 20px;margin-left:10px; margin-right:10px; margin-bottom:10px;">joaquinarroyo@outlook.com</h3>
+  // `;
+  // document.getElementById("contac").setAttribute(
+  //   "style",
+  //   `
+  //   background-color:#8AA6A3;
+  //   border-radius:20px;
+  //   border: 5px solid white;
+  //   height:auto;
+  //   width:auto;
+  //   margin-top:0px;
+  //   transition-property: height,width;
+  //   transition-duration: 2s,2s;
+
+  // `
+  // );
+  //AJUSTAMOS LA ALTURA DE EL NOMBRE DE LA PERSONA
+  document.getElementById("nombre").setAttribute(
     "style",
     `
-    background-color:#8AA6A3;
-    border-radius:20px;
-    height:auto; 
-    width:auto; 
-    margin-top:0px;
-    transition-property: height,width;
+    height:fit-content;
+    font-size: 45px;
+    transition-property: height,font-size;
     transition-duration: 2s,2s;
-    
-  `
+    `
   );
+  document.getElementById("cent2").setAttribute(
+    "style",
+    `
+    height:fit-content;
+    `
+  );
+  //quitando los botones de los perfiles
+  document.getElementById("perf").innerHTML = `
+  <div class="prof" id="prof">
+    <h1 class="h1prof" id="h1prof">Ingeniero Mecánico y Eléctrico</h1>
+  </div>`;
+  // document.getElementById("perf").setAttribute(
+  //   "style",
+  //   `
+  // font-family: "Fredoka", sans-serif;
+  // font-size: 40px;
+  // color:white;
+  // `
+  // );
 };

@@ -20,7 +20,7 @@ body {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: 1fr;
 }
 
@@ -124,11 +124,11 @@ body {
 }
 .perf1,
 .perf2 {
-  background-color: #127369;
+  background-color: #8aa6a3;
   /* background-color:#8AA6A3; */
   transition-property: background-color, border;
   transition-duration: 2s, 1s;
-  color: #bfbfbf;
+  color: white;
   font-family: "Fredoka", sans-serif;
   text-align: center;
   height: fit-content;
