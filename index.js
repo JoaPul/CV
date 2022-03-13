@@ -132,6 +132,13 @@ const Inicio = () => {
     "style",
     `
     margin-top:0px;
+
+  `
+  );
+  document.getElementById("nombre").setAttribute(
+    "style",
+    `
+  font-size: 50px;
   `
   );
   document.getElementById("imgcont").setAttribute(
@@ -256,6 +263,7 @@ const IME = () => {
     gap:10px;
     transition-property: display;
     transition-duration: 3s;
+    width:1000px;
   `
   );
   //TENER MARGIN EN header
@@ -265,7 +273,7 @@ const IME = () => {
     background-color: #127369;
     grid-row: 2;
     grid-column: 1;
-    height:466px;
+    height:400px;
     width:432px;
   `
   );
@@ -308,7 +316,7 @@ const IME = () => {
   //AÑADIR LA PROFESIÓN
   document.getElementById("profile").innerHTML = `
     <div class"prof" id="prof">
-      <h1 class="prh1" id="prh1">Ineniero <br>Mecánico y Eléctrico</h1>
+      <h1 class="prh1" id="prh1">Ingeniero <br>Mecánico y Eléctrico</h1>
     </div>
   `;
 
@@ -334,7 +342,7 @@ const IME = () => {
     `
     height:fit-content;
     font-size: 30px;
-    color: white;
+    color: #10403b;
     font-family: "Fredoka", sans-serif;
     transition-property: height,font-size;
     transition-duration: 2s,2s;
@@ -407,13 +415,10 @@ const IME = () => {
     "style",
     `
     height: auto;
-    width: auto;
+    width: 462px;
     background-color: #8aa6a3;
     border-radius: 30px;
     border: 8px solid white;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
     box-shadow: 5px 5px 5px black, -5px -5px 5px gray;
     transition-property: height, width, border, box-shadow;
     transition-duration: 2s, 2s, 2s, 2s;
@@ -421,21 +426,54 @@ const IME = () => {
     grid-column: 2;
     color:white;
     font-family: "Fredoka", sans-serif;
+    margin-top:20px;
 
   `
   );
-  document.getElementById("TE").setAttribute(
+  document.getElementById("personal").innerHTML = `
+    <div class="Pers" id="Pers">
+      <h1 class="TE" id="TE">Información Personal</h1>
+      <br>
+      <ul>
+        <li class="IE" Id="IE">
+        <span class="SE" id="SE">Telefono:</span> 3334958816
+        </li>
+      </ul>
+      <br>
+      <ul>
+        <li class="IE" Id="IE">
+        <span class="SE" id="SE">E-mail:</span> joaquinarroyo@outlook.com
+        </li>
+      </ul>
+      <br>
+      <ul>
+        <li class="IE" Id="IE">
+        <span class="SE" id="SE">Vive en:</span> Guadalajara
+        </li>
+      </ul>
+    </div>
+  `;
+  document.getElementById("personal").setAttribute(
     "style",
     `
-    font-size: 35px;
-    text-align: center;
+    height: auto;
+    width: 440px;
+    background-color: #8aa6a3;
+    border-radius: 30px;
+    border: 8px solid white;
+    box-shadow: 5px 5px 5px black, -5px -5px 5px gray;
+    transition-property: height, width, border, box-shadow;
+    transition-duration: 2s, 2s, 2s, 2s;
+    grid-row: 3 / 4 ;
+    grid-column: 1;
+    color:white;
+    font-family: "Fredoka", sans-serif;
   `
   );
-  document.getElementById("PE").setAttribute(
+  document.getElementById("Pers").setAttribute(
     "style",
     `
-    font-size: 20px;
-    margin-left:20px;
+    padding:10px;
   `
   );
 };

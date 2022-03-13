@@ -141,13 +141,19 @@ body {
   text-align: center;
 }
 
+/*ESTILOS DE LETRAS EN CAJAS DE PERFILES*/
 .SE {
   color: #10403b;
 }
-/* .exp {
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
-  justify-content: space-around;
-  align-items: center;
-} */
+.TE {
+  font-size: 35px;
+  text-align: center;
+}
+.PE {
+  font-size: 20px;
+  /* margin-left: 30px; */
+}
+.IE {
+  font-size: 20px;
+  margin-left: 30px;
+}
