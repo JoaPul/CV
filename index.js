@@ -41,6 +41,7 @@ const HMO = () => {
     `;
 };
 
+//INTRODUCE LOS BOTONES DE LOS PERFILES
 const perf = () => {
   /*-Cambiar de tamaño la foto de perfil
     -se agregan las opciones de perfiles
@@ -55,7 +56,13 @@ const perf = () => {
   document.getElementById("perf2").innerHTML = `
       <h1 class="p2h1" id="p2h1">Web Developer</h1>
   `;
+  document.getElementById("perf").setAttribute("style", `height: 120px;`);
 
+  //EN JERARQUIA DE OPERACIONES CON CSS, PRIMERO LE HARA CASO
+  // A LOS ATRIBUTOS DE LA MISMA ETIQUETA QUE LLEVEN POR NOMBRE 'style'
+  // por ejemplo "<h1 class='perf' style>...</h1>"
+  // QUE A LA ETIQUETA QUE CAMBIA TODO LOS ESTIDOS LLAMADA 'style'
+  // por ejemplo "<style>...</style>"
   document.getElementById("style").innerHTML = `
   .header {
     border: 8px solid white;
@@ -79,9 +86,6 @@ const perf = () => {
     justify-content:center;
     align-items:center;
     
-  }
-  .perf{
-    height: 120px;
   }
   .perf1, .perf2{
     height:70px;
@@ -123,6 +127,7 @@ const Inicio = () => {
   min-height: 100%;
   `
   );
+  document.getElementById("header").setAttribute("onclick", "perf()");
   document.getElementById("header").setAttribute(
     "style",
     `
@@ -140,17 +145,19 @@ const Inicio = () => {
   );
   document.getElementById("cent1").setAttribute("style", "flex-direction: rows;");
   document.getElementById("contac").innerHTML = ``;
-  document.getElementById("exp/proj").innerHTML = ``;
+  document.getElementById("expProj").innerHTML = ``;
   document.getElementById("personal").innerHTML = ``;
-  document.getElementById("ski/too").innerHTML = ``;
-  document.getElementById("edu/cur").innerHTML = ``;
+  document.getElementById("skiToo").innerHTML = ``;
+  document.getElementById("eduCur").innerHTML = ``;
   document.getElementById("Certi").innerHTML = ``;
+  document.getElementById("profile").innerHTML = "";
 
+  document.getElementById("profile").setAttribute("style", "");
   document.getElementById("contac").setAttribute("style", "");
-  document.getElementById("exp/proj").setAttribute("style", "");
+  document.getElementById("expProj").setAttribute("style", "");
   document.getElementById("personal").setAttribute("style", "");
-  document.getElementById("ski/too").setAttribute("style", "");
-  document.getElementById("edu/cur").setAttribute("style", "");
+  document.getElementById("skiToo").setAttribute("style", "");
+  document.getElementById("eduCur").setAttribute("style", "");
   document.getElementById("Certi").setAttribute("style", "");
 
   //CAMBIO DE ACCION CUANDO SE PASA EL MOUSE
@@ -241,7 +248,7 @@ const IME = () => {
     `
     display:grid;
     grid-template-columns:1fr 1fr;
-    grid-template-rows:repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -255,8 +262,11 @@ const IME = () => {
   document.getElementById("header").setAttribute(
     "style",
     `
-    margin-top:30px;
     background-color: #127369;
+    grid-row: 2;
+    grid-column: 1;
+    height:466px;
+    width:432px;
   `
   );
   //CAMBIAR TAMAÑO DE FOTO
@@ -269,28 +279,6 @@ const IME = () => {
     transition-duration: 2s,2s;
   `
   );
-  //Ajustacion de .cent1
-  // document.getElementById("cent1").setAttribute("style", "flex-direction: column;justify-content:space-around; ");
-
-  //PONER INFORMACION DE CONTACTO
-  // document.getElementById("contac").innerHTML = `
-  //   <h3 class="phone" id="phone" style="height:auto; width:auto; color:white; font-family:'Fredoka', sans-serif; font-size: 20px; margin-top:10px;">3334958816</h3>
-  //   <h3 class="mail" id="mail" style="height:auto; width:auto; color:white; font-family:'Fredoka', sans-serif; font-size: 20px;margin-left:10px; margin-right:10px; margin-bottom:10px;">joaquinarroyo@outlook.com</h3>
-  // `;
-  // document.getElementById("contac").setAttribute(
-  //   "style",
-  //   `
-  //   background-color:#8AA6A3;
-  //   border-radius:20px;
-  //   border: 5px solid white;
-  //   height:auto;
-  //   width:auto;
-  //   margin-top:0px;
-  //   transition-property: height,width;
-  //   transition-duration: 2s,2s;
-
-  // `
-  // );
   //AJUSTAMOS LA ALTURA DE EL NOMBRE DE LA PERSONA
   document.getElementById("nombre").setAttribute(
     "style",
@@ -308,16 +296,146 @@ const IME = () => {
     `
   );
   //quitando los botones de los perfiles
-  document.getElementById("perf").innerHTML = `
-  <div class="prof" id="prof">
-    <h1 class="h1prof" id="h1prof">Ingeniero Mecánico y Eléctrico</h1>
-  </div>`;
-  // document.getElementById("perf").setAttribute(
-  //   "style",
-  //   `
-  // font-family: "Fredoka", sans-serif;
-  // font-size: 40px;
-  // color:white;
-  // `
-  // );
+
+  document.getElementById("header").setAttribute("onclick", "");
+  document.getElementById("perf").innerHTML = "";
+  document.getElementById("perf").setAttribute(
+    "style",
+    `height:0px;
+    width:0px;`
+  );
+
+  //AÑADIR LA PROFESIÓN
+  document.getElementById("profile").innerHTML = `
+    <div class"prof" id="prof">
+      <h1 class="prh1" id="prh1">Ineniero <br>Mecánico y Eléctrico</h1>
+    </div>
+  `;
+
+  document.getElementById("profile").setAttribute(
+    "style",
+    `
+    height:auto;
+    width:auto;
+    background-color:#8aa6a3;
+    border-radius:30px;
+    grid-row:1;
+    grid-column:1;
+    border:8px solid white;
+    box-shadow: 5px 5px 5px black,-5px -5px 5px gray;
+    margin-top:30px;
+    transition-property: height,width,border, box-shadow, margin-top;
+    transition-duration: 2s,2s,2s,2s,1s;
+    
+    `
+  );
+  document.getElementById("prof").setAttribute(
+    "style",
+    `
+    height:fit-content;
+    font-size: 30px;
+    color: white;
+    font-family: "Fredoka", sans-serif;
+    transition-property: height,font-size;
+    transition-duration: 2s,2s;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin:10px;
+    align-text:center;
+  `
+  );
+  document.getElementById("prh1").setAttribute(
+    "style",
+    `
+    align-text:center;
+  `
+  );
+
+  /*<div class="exp/proj" id="exp/proj"></div>
+    <div class="personal" id="personal"></div>
+    <div class="ski/too" id="ski/too"></div>
+    <div class="edu/cur" id="edu/cur"></div>
+    <div class="Certi" id="Certi"></div>*/
+  document.getElementById("expProj").innerHTML = `
+    <br>
+      <h1 class="TE" id="TE">Experiencia Laboral</h1>
+      <br>
+      <div class="PE" id="PE">
+      <ul>
+        <li class="IE" Id="IE"> <span class="SE" id="SE">(December 2020 - July 2020)
+        </span>
+        <br>
+        Huawei | Gerente de adquisiciones de Proyectos</IE>
+        </li>
+        <br>
+
+        <li class="IE" Id="IE"><span class="SE" id="SE">(Septiembre 2020 – Diciembre 2020)
+        </span>
+        <br>
+        Industrializadora Oleofinos | Planeador de Mantenimiento
+        </IE></li>
+        <br>
+
+        <li class="IE" Id="IE"><span class="SE" id="SE">(Abril 2020 – Septiembre 2020)
+        </span>
+        <br>
+        Industrializadora Oleofinos | Técnico Mantenimiento Mecánico
+        </IE></li>
+        <br>
+
+        <li class="IE" Id="IE"><span class="SE" id="SE">(Junio 2019 – Diciembre 2019)
+        </span>
+        <br>
+        Docudigital de Occidente SA de CV|Interno en departamento Servicio Técnico
+        </IE></li>
+        <br>
+
+        <li class="IE" Id="IE"><span class="SE" id="SE">(Enero 2019 – Mayo 2019)
+        </span>
+        <br>
+        AGENCIA FORD MAMERICAS S.A. DE C.V|Ayudante de mecánico automotriz
+        </IE></li>
+        <br>
+
+        </ul>
+      </div>
+  `;
+  document.getElementById("expProj").setAttribute(
+    "style",
+    `
+    height: auto;
+    width: auto;
+    background-color: #8aa6a3;
+    border-radius: 30px;
+    border: 8px solid white;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    box-shadow: 5px 5px 5px black, -5px -5px 5px gray;
+    transition-property: height, width, border, box-shadow;
+    transition-duration: 2s, 2s, 2s, 2s;
+    grid-row: 1 / 3 ;
+    grid-column: 2;
+    color:white;
+    font-family: "Fredoka", sans-serif;
+
+  `
+  );
+  document.getElementById("TE").setAttribute(
+    "style",
+    `
+    font-size: 35px;
+    text-align: center;
+  `
+  );
+  document.getElementById("PE").setAttribute(
+    "style",
+    `
+    font-size: 20px;
+    margin-left:20px;
+  `
+  );
 };

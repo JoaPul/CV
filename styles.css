@@ -137,3 +137,17 @@ body {
 .contac {
   text-align: center;
 }
+.prh1 {
+  text-align: center;
+}
+
+.SE {
+  color: #10403b;
+}
+/* .exp {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
+} */
