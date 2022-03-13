@@ -438,17 +438,17 @@ const IME = () => {
         <li class="IE" Id="IE">
         <span class="SE" id="SE">Telefono:</span> 3334958816
         </li>
-      </ul>
-      <br>
-      <ul>
+        <br>
         <li class="IE" Id="IE">
         <span class="SE" id="SE">E-mail:</span> joaquinarroyo@outlook.com
         </li>
-      </ul>
-      <br>
-      <ul>
+        <br>
         <li class="IE" Id="IE">
         <span class="SE" id="SE">Vive en:</span> Guadalajara
+        </li>
+        <br>
+        <li class="IE" Id="IE">
+        <span class="SE" id="SE">Linkedin:</span> <a href="www.linkedin.com/in/joaquin-arroyo" style="text-decoration:none;">joaquin-arroyo</a>
         </li>
       </ul>
     </div>
