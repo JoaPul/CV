@@ -111,6 +111,15 @@ const Inicio = () => {
   document.getElementById("perf").innerHTML = ``;
   // document.getElementById("perf2").innerHTML = ``;
   HMO();
+  document.getElementById("style").innerHTML = ``;
+  document.getElementById("perf").setAttribute(
+    "style",
+    `
+  height: 0px;
+  transition-property: height;
+  transition-duration: 2s;
+  `
+  );
 
   //LIMPIAR PANTALLA Y LOS DIV QUE HAY DENTRO DE PANTALLA
   //contenedor HEADER
@@ -253,10 +262,11 @@ const IME = () => {
   document.getElementById("pantalla").setAttribute(
     "style",
     `
+
     display:grid;
     grid-template-columns:1fr 1fr;
-    grid-template-rows: repeat(5,1fr);
-    align-content: center;
+    grid-template-rows: repeat(5,auto);
+    align-content: space-between;
     justify-content: center;
     align-items: center;
     justify-items: center;
@@ -264,6 +274,7 @@ const IME = () => {
     transition-property: display;
     transition-duration: 3s;
     width:1000px;
+    height: auto;
   `
   );
   //TENER MARGIN EN header
@@ -373,10 +384,17 @@ const IME = () => {
       <br>
       <div class="PE" id="PE">
       <ul>
-        <li class="IE" Id="IE"> <span class="SE" id="SE">(December 2020 - July 2020)
+        <li class="IE" Id="IE"> <span class="SE" id="SE">(Marzo 2021 - Julio 2021)
         </span>
         <br>
-        Huawei | Gerente de adquisiciones de Proyectos</IE>
+        Huawei | Gerente de adquisiciones de Proyectos
+        </li>
+        <br>
+
+        <li class="IE" Id="IE"> <span class="SE" id="SE">(December 2020 - Marzo 2021)
+        </span>
+        <br>
+        Huawei | Interno en departamento de Proyectos
         </li>
         <br>
 
@@ -384,28 +402,28 @@ const IME = () => {
         </span>
         <br>
         Industrializadora Oleofinos | Planeador de Mantenimiento
-        </IE></li>
+        </li>
         <br>
 
         <li class="IE" Id="IE"><span class="SE" id="SE">(Abril 2020 – Septiembre 2020)
         </span>
         <br>
         Industrializadora Oleofinos | Técnico Mantenimiento Mecánico
-        </IE></li>
+        </li>
         <br>
 
         <li class="IE" Id="IE"><span class="SE" id="SE">(Junio 2019 – Diciembre 2019)
         </span>
         <br>
         Docudigital de Occidente SA de CV|Interno en departamento Servicio Técnico
-        </IE></li>
+        </li>
         <br>
 
         <li class="IE" Id="IE"><span class="SE" id="SE">(Enero 2019 – Mayo 2019)
         </span>
         <br>
         AGENCIA FORD MAMERICAS S.A. DE C.V|Ayudante de mecánico automotriz
-        </IE></li>
+        </li>
         <br>
 
         </ul>
@@ -491,14 +509,68 @@ const IME = () => {
     "style",
     `
     height: auto;
-    width: 450px;
+    width: 448px;
     background-color: #8aa6a3;
     border-radius: 30px;
     border: 8px solid white;
     box-shadow: 5px 5px 5px black, -5px -5px 5px gray;
     transition-property: height, width, border, box-shadow;
     transition-duration: 2s, 2s, 2s, 2s;
-    grid-row: 3 / 4 ;
+    grid-row: 4 / 5 ;
+    grid-column: 1;
+    color:white;
+    font-family: "Fredoka", sans-serif;
+  `
+  );
+  document.getElementById("eduCur").innerHTML = `
+  <div class="Pers" id="Pers">
+  <h1 class="TE" id="TE">Educación</h1>
+  <br>
+  <ul>
+  <li class="IE" Id="IE"><span class="SE" id="SE">(Septiembre 2016 - Diciembre 2019) <br>Universidad Autonoma de Guadalajara 
+  </span>
+  <br>
+  Ingeniería Mecánica y Eléctrica
+  </li>
+  <li class="IE" Id="IE"><span class="SE" id="SE">(Febrero 2019 - Marzo 2019) <br>Centro de Capacitación CARSO 
+  </span>
+  <br>
+  Instalación residencial y comerciales en Baja Tensión
+  </li>
+  <br>
+  <li class="IE" Id="IE"><span class="SE" id="SE">(Octubre 2020 - Diciembre 2020) <br>Programming Hub  
+  </span>
+  <br>
+  Python Certification Course
+  </li>
+  <br>
+  <li class="IE" Id="IE"><span class="SE" id="SE">(Octubre 2021 - Actualmete) <br>Dev.f  
+  </span>
+  <br>
+  Master en Coding de Desarrollo web
+  </li>
+  <br>
+  <li class="IE" Id="IE"><span class="SE" id="SE">(Enero 2022 - Actualmete) <br>Udemy  
+  </span>
+  <br>
+  Machine Learning: Data Science en Python
+  </li>
+  <br>
+  </ul>
+  </div>
+  `;
+  document.getElementById("eduCur").setAttribute(
+    "style",
+    `
+    height: auto;
+    width: 460px;
+    background-color: #8aa6a3;
+    border-radius: 30px;
+    border: 8px solid white;
+    box-shadow: 5px 5px 5px black, -5px -5px 5px gray;
+    transition-property: height, width, border, box-shadow;
+    transition-duration: 2s, 2s, 2s, 2s;
+    grid-row: 3 / 5 ;
     grid-column: 2;
     color:white;
     font-family: "Fredoka", sans-serif;
