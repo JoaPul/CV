@@ -362,10 +362,10 @@ const IME = () => {
   `
   );
 
-  /*<div class="exp/proj" id="exp/proj"></div>
+  /*<div class="exp/proj" id="expProj"></div>
     <div class="personal" id="personal"></div>
-    <div class="ski/too" id="ski/too"></div>
-    <div class="edu/cur" id="edu/cur"></div>
+    <div class="ski/too" id="skiToo"></div>
+    <div class="edu/cur" id="eduCur"></div>
     <div class="Certi" id="Certi"></div>*/
   document.getElementById("expProj").innerHTML = `
     <br>
@@ -444,12 +444,13 @@ const IME = () => {
         </li>
         <br>
         <li class="IE" Id="IE">
-        <span class="SE" id="SE">Vive en:</span> Guadalajara
+        <span class="SE" id="SE">Linkedin:</span> <a href="www.linkedin.com/in/joaquin-arroyo" style="text-decoration:none;">joaquin-arroyo</a>
         </li>
         <br>
         <li class="IE" Id="IE">
-        <span class="SE" id="SE">Linkedin:</span> <a href="www.linkedin.com/in/joaquin-arroyo" style="text-decoration:none;">joaquin-arroyo</a>
+        <span class="SE" id="SE">Vive en:</span> Guadalajara, Jalisco, México
         </li>
+        
       </ul>
     </div>
   `;
@@ -470,10 +471,37 @@ const IME = () => {
     font-family: "Fredoka", sans-serif;
   `
   );
-  document.getElementById("Pers").setAttribute(
+  document.getElementById("Certi").innerHTML = `
+  <div class="Pers" id="Pers">
+    <h1 class="TE" id="TE">Credenciales y Certificados</h1>
+    <br>
+    <ul>
+    <li class="IE" Id="IE">
+    <span class="SE" id="SE">Cedula Profesional:</span> <a href="https://drive.google.com/file/d/1KeDb6hsSlbwfYnCRiQiFaxevyPxS1_iL/view?usp=sharing" style="text-decoration:none;"> PDF (click aqui)</a>
+    </li>
+    <br>
+    <li class="IE" Id="IE">
+        <span class="SE" id="SE">Certificados:</span> <a href="https://docs.google.com/presentation/d/10m6C3I4tpPXPsQXLXfohlTTTXDU1GEuI55C5nigS5ZM/edit?usp=sharing" style="text-decoration:none;"> PPT (click aqui)</a>
+        </li>
+        <br>
+    </ul>
+  </div>
+  `;
+  document.getElementById("Certi").setAttribute(
     "style",
     `
-    padding:10px;
+    height: auto;
+    width: 450px;
+    background-color: #8aa6a3;
+    border-radius: 30px;
+    border: 8px solid white;
+    box-shadow: 5px 5px 5px black, -5px -5px 5px gray;
+    transition-property: height, width, border, box-shadow;
+    transition-duration: 2s, 2s, 2s, 2s;
+    grid-row: 3 / 4 ;
+    grid-column: 2;
+    color:white;
+    font-family: "Fredoka", sans-serif;
   `
   );
 };
