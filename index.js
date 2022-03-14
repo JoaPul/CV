@@ -265,7 +265,7 @@ const IME = () => {
 
     display:grid;
     grid-template-columns:1fr 1fr;
-    grid-template-rows: repeat(5,auto);
+    grid-template-rows: repeat(6,auto);
     align-content: space-between;
     justify-content: center;
     align-items: center;
@@ -373,11 +373,7 @@ const IME = () => {
   `
   );
 
-  /*<div class="exp/proj" id="expProj"></div>
-    <div class="personal" id="personal"></div>
-    <div class="ski/too" id="skiToo"></div>
-    <div class="edu/cur" id="eduCur"></div>
-    <div class="Certi" id="Certi"></div>*/
+  //SE AÑADE LOS CUADRO DE EXPERIENCIA
   document.getElementById("expProj").innerHTML = `
     <br>
       <h1 class="TE" id="TE">Experiencia Laboral</h1>
@@ -415,14 +411,14 @@ const IME = () => {
         <li class="IE" Id="IE"><span class="SE" id="SE">(Junio 2019 – Diciembre 2019)
         </span>
         <br>
-        Docudigital de Occidente SA de CV|Interno en departamento Servicio Técnico
+        Docudigital de Occidente SA de CV| Interno en departamento Servicio Técnico
         </li>
         <br>
 
         <li class="IE" Id="IE"><span class="SE" id="SE">(Enero 2019 – Mayo 2019)
         </span>
         <br>
-        AGENCIA FORD MAMERICAS S.A. DE C.V|Ayudante de mecánico automotriz
+        AGENCIA FORD MAMERICAS S.A. DE C.V| Ayudante de mecánico automotriz
         </li>
         <br>
 
@@ -448,6 +444,7 @@ const IME = () => {
 
   `
   );
+  //SE AÑADE LOS CUADRO DE INFORMACION PERSONAL
   document.getElementById("personal").innerHTML = `
     <div class="Pers" id="Pers">
       <h1 class="TE" id="TE">Información Personal</h1>
@@ -489,13 +486,14 @@ const IME = () => {
     font-family: "Fredoka", sans-serif;
   `
   );
+  //SE AÑADE LOS CUADRO DE CERTIFICADOS Y CEDULA PROF
   document.getElementById("Certi").innerHTML = `
   <div class="Pers" id="Pers">
     <h1 class="TE" id="TE">Credenciales y Certificados</h1>
     <br>
     <ul>
     <li class="IE" Id="IE">
-    <span class="SE" id="SE">Cedula Profesional:</span> <a href="https://drive.google.com/file/d/1KeDb6hsSlbwfYnCRiQiFaxevyPxS1_iL/view?usp=sharing" style="text-decoration:none;"> PDF (click aqui)</a>
+    <span class="SE" id="SE">Cédula Profesional:</span> <a href="https://drive.google.com/file/d/1KeDb6hsSlbwfYnCRiQiFaxevyPxS1_iL/view?usp=sharing" style="text-decoration:none;"> PDF (click aqui)</a>
     </li>
     <br>
     <li class="IE" Id="IE">
@@ -509,7 +507,7 @@ const IME = () => {
     "style",
     `
     height: auto;
-    width: 448px;
+    width: 440px;
     background-color: #8aa6a3;
     border-radius: 30px;
     border: 8px solid white;
@@ -522,9 +520,10 @@ const IME = () => {
     font-family: "Fredoka", sans-serif;
   `
   );
+  //SE AÑADE LOS CUADRO DE EDUCACIÓN
   document.getElementById("eduCur").innerHTML = `
   <div class="Pers" id="Pers">
-  <h1 class="TE" id="TE">Educación</h1>
+  <h1 class="TE" id="TE">Formación</h1>
   <br>
   <ul>
   <li class="IE" Id="IE"><span class="SE" id="SE">(Septiembre 2016 - Diciembre 2019) <br>Universidad Autonoma de Guadalajara 
@@ -532,6 +531,13 @@ const IME = () => {
   <br>
   Ingeniería Mecánica y Eléctrica
   </li>
+  <br>
+  <li class="IE" Id="IE"><span class="SE" id="SE">(Abril 2018 - Noviembre 2018) <br>Grupo Milenio 
+  </span>
+  <br>
+  Voluntariado, Aprendiz de Reportero
+  </li>
+  <br>
   <li class="IE" Id="IE"><span class="SE" id="SE">(Febrero 2019 - Marzo 2019) <br>Centro de Capacitación CARSO 
   </span>
   <br>
@@ -570,10 +576,49 @@ const IME = () => {
     box-shadow: 5px 5px 5px black, -5px -5px 5px gray;
     transition-property: height, width, border, box-shadow;
     transition-duration: 2s, 2s, 2s, 2s;
-    grid-row: 3 / 5 ;
+    grid-row: 3 / 6 ;
     grid-column: 2;
     color:white;
     font-family: "Fredoka", sans-serif;
   `
   );
+  //SE AÑADE LOS CUADRO DE IDIOMAS
+  document.getElementById("skiToo").innerHTML = `
+  <div class="Pers" id="Pers">
+    <h1 class="TE" id="TE">Idiomas</h1>
+    <br>
+    <ul>
+      <li class="IE" Id="IE"><span class="SE" id="SE">Español: </span>
+        Nativo
+      </li>
+      
+      <li class="IE" Id="IE"><span class="SE" id="SE">Ingles: </span>
+        Avanzado
+      </li>
+      
+      <li class="IE" Id="IE"><span class="SE" id="SE">Aleman: </span>
+        Básico
+      </li>
+      
+    </ul>
+  </div>
+  `;
+  document.getElementById("skiToo").setAttribute(
+    "style",
+    `
+    height: auto;
+    width: 440px;
+    background-color: #8aa6a3;
+    border-radius: 30px;
+    border: 8px solid white;
+    box-shadow: 5px 5px 5px black, -5px -5px 5px gray;
+    transition-property: height, width, border, box-shadow;
+    transition-duration: 2s, 2s, 2s, 2s;
+    grid-row: 5;
+    grid-column: 1;
+    color: white;
+    font-family: "Fredoka", sans-serif;
+  `
+  );
+  //SE AÑADE LOS CUADRO DE HERRAMIENTAS Y SOFTWARES UTILIZADOS
 };
