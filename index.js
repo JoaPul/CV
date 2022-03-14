@@ -447,28 +447,26 @@ const IME = () => {
   //SE AÑADE LOS CUADRO DE INFORMACION PERSONAL
   document.getElementById("personal").innerHTML = `
     <div class="Pers" id="Pers">
-      <h1 class="TE" id="TE">Información Personal</h1>
+      <h1 class="TE" id="TE">Contacto</h1>
       <br>
-      <ul>
-        <li class="IE" Id="IE">
-        <span class="SE" id="SE">Telefono:</span> 3334958816
-        </li>
-        <br>
-        <li class="IE" Id="IE">
-        <span class="SE" id="SE">E-mail:</span> joaquinarroyo@outlook.com
-        </li>
-        <br>
-        <li class="IE" Id="IE">
-        <span class="SE" id="SE">Linkedin:</span> <a href="www.linkedin.com/in/joaquin-arroyo" style="text-decoration:none;">joaquin-arroyo</a>
-        </li>
-        <br>
-        <li class="IE" Id="IE">
-        <span class="SE" id="SE">Vive en:</span> Guadalajara, Jalisco, México
-        </li>
-        
-      </ul>
+      <div class="Cont" id="Cont">
+      <img src="./assets/Lin" alt="Linkedin logo" />
+      </div>
     </div>
   `;
+  // <ul>
+  //       <li class="IE" Id="IE">
+  //       <span class="SE" id="SE">E-mail:</span> joaquinarroyo@outlook.com
+  //       </li>
+  //       <br>
+  //       <li class="IE" Id="IE">
+  //       <span class="SE" id="SE">Linkedin:</span> <a href="www.linkedin.com/in/joaquin-arroyo" style="text-decoration:none;">joaquin-arroyo</a>
+  //       </li>
+  //       <br>
+  //     </ul>
+  // <li class="IE" Id="IE">
+  // <span class="SE" id="SE">Vive en:</span> Guadalajara, Jalisco, México
+  // </li>
   document.getElementById("personal").setAttribute(
     "style",
     `
