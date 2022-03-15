@@ -183,5 +183,49 @@ a {
 .credCe,
 .credCo {
   border-radius: 5px;
-  border: 1px solid #10403b;
+  border: 3px solid #10403b;
+}
+.cien {
+  height: auto;
+  width: 100%-10px;
+  background-color: #10403b;
+  border: 5px solid white;
+  border-radius: 10px;
+}
+.cuarenta,
+.veinte,
+.diez,
+.ochenta {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: #127369;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  transition-property: background-color, align-content, justify-content;
+  transition-duration: 2s, 1s, 1s;
+}
+.cuarenta {
+  width: 40%;
+  transition-property: width;
+  transition-duration: 2s;
+}
+.veinte {
+  width: 20%;
+  transition-property: width;
+  transition-duration: 2s;
+}
+.diez {
+  width: 10%;
+  transition-property: width;
+  transition-duration: 2s;
+}
+.diez .IE {
+  margin-left: -8px;
+}
+.ochenta {
+  width: 80%;
+  transition-property: width;
+  transition-duration: 2s;
 }

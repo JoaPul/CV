@@ -94,7 +94,7 @@ const perf = () => {
     justify-content:center;
     align-items:center;
     border-radius: 30px;
-    border:1px solid white;
+    border:3px solid white;
   }
   .p1h1,.p2h1{
     height:fit-content;
@@ -108,6 +108,12 @@ const perf = () => {
 
 //CAMBIO DE COLOR AL BOTON DE REGREASAR
 const Inicio = () => {
+  document.getElementById("todo").setAttribute(
+    "style",
+    `
+    height:100%;
+  `
+  );
   document.getElementById("perf").innerHTML = ``;
   // document.getElementById("perf2").innerHTML = ``;
   HMO();
@@ -167,7 +173,9 @@ const Inicio = () => {
   document.getElementById("eduCur").innerHTML = ``;
   document.getElementById("Certi").innerHTML = ``;
   document.getElementById("profile").innerHTML = "";
+  document.getElementById("skills").innerHTML = "";
 
+  document.getElementById("skills").setAttribute("style", "");
   document.getElementById("profile").setAttribute("style", "");
   document.getElementById("contac").setAttribute("style", "");
   document.getElementById("expProj").setAttribute("style", "");
@@ -258,6 +266,13 @@ const perf2HMO = () => {
 };
 
 const IME = () => {
+  //TODO height
+  document.getElementById("todo").setAttribute(
+    "style",
+    `
+    height:auto;
+  `
+  );
   //HACER GRID EN PANTALLA
   document.getElementById("pantalla").setAttribute(
     "style",
@@ -275,6 +290,7 @@ const IME = () => {
     transition-duration: 3s;
     width:1000px;
     height: auto;
+    margin-bottom: 20px;
   `
   );
   //TENER MARGIN EN header
@@ -285,7 +301,7 @@ const IME = () => {
     grid-row: 2;
     grid-column: 1;
     height:400px;
-    width:432px;
+    width:440px;
   `
   );
   //CAMBIAR TAMAÑO DE FOTO
@@ -335,7 +351,7 @@ const IME = () => {
     "style",
     `
     height:auto;
-    width:auto;
+    width:440px;
     background-color:#8aa6a3;
     border-radius:30px;
     grid-row:1;
@@ -482,7 +498,7 @@ const IME = () => {
   //SE AÑADE LOS CUADRO DE CERTIFICADOS Y CEDULA PROF
   document.getElementById("Certi").innerHTML = `
   <div class="Pers" id="Pers">
-    <h1 class="TE" id="TE">Credenciales y Certificados</h1>
+    <h1 class="TE" id="TE"><span class="CRE" id="CRE">Credenciales</span> y <span class="CER" id="CER">Certificados</span></h1>
     <br>
     <div class="Cont" id="Cont">
       <a href="https://drive.google.com/file/d/1KeDb6hsSlbwfYnCRiQiFaxevyPxS1_iL/view?usp=sharing">
@@ -616,6 +632,73 @@ const IME = () => {
   `
   );
   //SE AÑADE EL CUADRO DE HERRAMIENTAS Y SOFTWARES UTILIZADOS
+  document.getElementById("skills").innerHTML = `
+  <div class="Pers" id="Pers">
+    <h1 class="TE" id="TE">Habilidades (uso en años)</h1>
+    <br>
+    <ul>
+      <br>
+      <li class="IE" Id="IE">Autocad 2D</li>
+      <div class="cien" id="cien">
+        <div class="cuarenta" id="cuarenta">
+          <p class="IE" id="IE">2 años</p>
+        </div>
+      </div>
+      <br>
+      <li class="IE" Id="IE">Solidworks</li>
+      <div class="cien" id="cien">
+        <div class="veinte" id="veinte">
+          <p class="IE" id="IE">1 años</p>
+        </div>
+      </div>
+      <br>
+      <li class="IE" Id="IE">Metodología TPM</li>
+      <div class="cien" id="cien">
+        <div class="veinte" id="veinte">
+          <p class="IE" id="IE">1 años</p>
+        </div>
+      </div>
+      <br>
+      <li class="IE" Id="IE">Matlab</li>
+      <div class="cien" id="cien">
+        <div class="diez" id="diez">
+          <p class="IE" id="IE">.5 años</p>
+        </div>
+      </div>
+      <br>
+      <li class="IE" Id="IE">Excel</li>
+      <div class="cien" id="cien">
+        <div class="ochenta" id="ochenta">
+          <p class="IE" id="IE">4 años</p>
+        </div>
+      </div>
+      <br>
+      <li class="IE" Id="IE">Autodesk Flow Design</li>
+      <div class="cien" id="cien">
+        <div class="diez" id="diez">
+          <p class="IE" id="IE">.5 años</p>
+        </div>
+      </div>
+    </ul>
+  </div>
+  `;
+  document.getElementById("skills").setAttribute(
+    "style",
+    `
+    height: auto;
+    width: 96%;
+    background-color: #8aa6a3;
+    border-radius: 30px;
+    border: 8px solid white;
+    box-shadow: 5px 5px 5px black, -5px -5px 5px gray;
+    transition-property: height, width, border, box-shadow;
+    transition-duration: 2s, 2s, 2s, 2s;
+    grid-row: 6;
+    grid-column: 1/3;
+    color: white;
+    font-family: "Fredoka", sans-serif;
+  `
+  );
 };
 
 //onmouseover="credHMI()" onmouseout="credHMO()"
@@ -624,20 +707,61 @@ const credHMI = (a) => {
     "style",
     `
     border-radius: 10px;
-    border: 5px solid #10403b;
-    transition-property: border-radius, border;
-    transition-duration: 2s, 1s;
+    box-shadow: 5px 5px 5px black,-5px -5px 5px gray;
+    border: 3px solid #10403b;
+    transition-property: border-radius, border, box-shadow;
+    transition-duration: 2s, 1s, 1s;
   `
   );
+
+  if (a == "credCe") {
+    document.getElementById("CRE").setAttribute(
+      "style",
+      `
+      color: #10403b;
+      transition-property: color;
+      transition-duration: 1s;
+    `
+    );
+  } else if (a == "credCo") {
+    document.getElementById("CER").setAttribute(
+      "style",
+      `
+      color: #10403b;
+      transition-property: color;
+      transition-duration: 1s;
+    `
+    );
+  }
 };
 const credHMO = (a) => {
   document.getElementById(a).setAttribute(
     "style",
     `
     border-radius: 5px;
-    border: 1px solid #10403b;
-    transition-property: border-radius, border;
-    transition-duration: 2s, 1s;
+    box-shadow: 0px 0px 0px black,0px 0px 0px gray;
+    border: 3px solid #10403b;
+    transition-property: border-radius, border, box-shadow;
+    transition-duration: 2s, 1s, 1s;
   `
   );
+  if (a == "credCe") {
+    document.getElementById("CRE").setAttribute(
+      "style",
+      `
+      color: white;
+      transition-property: color;
+      transition-duration: 1s;
+    `
+    );
+  } else if (a == "credCo") {
+    document.getElementById("CER").setAttribute(
+      "style",
+      `
+      color: white;
+      transition-property: color;
+      transition-duration: 1s;
+    `
+    );
+  }
 };
