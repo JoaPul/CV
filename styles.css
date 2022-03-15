@@ -162,3 +162,26 @@ a {
 .Pers {
   padding: 10px;
 }
+.Cont {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+/*CAJAS DE IMAGENES EN CONTACTOS Y CREDENCIALES*/
+.credL img,
+.credE img,
+.credG img,
+.credCe img,
+.credCo img {
+  padding: 10px;
+}
+.credL,
+.credE,
+.credG,
+.credCe,
+.credCo {
+  border-radius: 5px;
+  border: 1px solid #10403b;
+}

@@ -213,7 +213,7 @@ const perf1HMI = () => {
     "style",
     `
     box-shadow: 5px 5px 5px black,-5px -5px 5px gray;
-    border: 5px solid white;
+    border: 8px solid white;
     background-color:#0f4d46;
     transition-property: border, box-shadow, background-color;
     transition-duration: 2s, 1s, 1s;
@@ -225,7 +225,7 @@ const perf1HMO = () => {
     "style",
     `
     box-shadow: 0px 0px 0px black, 0px 0px 0px gray;
-    border:1px solid white;
+    border:3px solid white;
     background-color: #8AA6A3;
     transition-property: border, box-shadow, background-color;
     transition-duration: 2s, 1s, 1s;
@@ -237,7 +237,7 @@ const perf2HMI = () => {
     "style",
     `
     box-shadow: 5px 5px 5px black,-5px -5px 5px gray;
-    border: 5px solid white;
+    border: 8px solid white;
     background-color:#0f4d46;
     transition-property: border, box-shadow, background-color;
     transition-duration: 2s, 1s, 1s;
@@ -249,7 +249,7 @@ const perf2HMO = () => {
     "style",
     `
     box-shadow: 0px 0px 0px black, 0px 0px 0px gray;
-    border:1px solid white;
+    border:3px solid white;
     background-color: #8AA6A3;
     transition-property: border, box-shadow, background-color;
     transition-duration: 2s, 1s, 1s;
@@ -450,23 +450,18 @@ const IME = () => {
       <h1 class="TE" id="TE">Contacto</h1>
       <br>
       <div class="Cont" id="Cont">
-      <img src="./assets/Lin" alt="Linkedin logo" />
+        <div class="credL" id="credL" onmouseover="credHMI('credL')" onmouseout="credHMO('credL')">
+          <a href="https://www.linkedin.com/in/joaquin-arroyo"><img src="./assets/Lin.png" alt="Linkedin logo" style="height: 40px; width: 40px;"/></a>
+        </div>
+        <div class="credE" id="credE" onmouseover="credHMI('credE')" onmouseout="credHMO('credE')">
+          <a href=mailto:joaquinarroyo@outlook.com?subject="Contacto"><img src="./assets/Mail.png" alt="Mail logo" href="" style="height: 40px; width: 40px;"/></a>
+        </div>
+        <div class="credG" id="credG" onmouseover="credHMI('credG')" onmouseout="credHMO('credG')">
+          <a href="https://github.com/JoaPul"><img src="./assets/Git.png" alt="Github logo" href="https://github.com/JoaPul" style="height: 40px; width: 40px;"/></a>
+        </div>
       </div>
     </div>
   `;
-  // <ul>
-  //       <li class="IE" Id="IE">
-  //       <span class="SE" id="SE">E-mail:</span> joaquinarroyo@outlook.com
-  //       </li>
-  //       <br>
-  //       <li class="IE" Id="IE">
-  //       <span class="SE" id="SE">Linkedin:</span> <a href="www.linkedin.com/in/joaquin-arroyo" style="text-decoration:none;">joaquin-arroyo</a>
-  //       </li>
-  //       <br>
-  //     </ul>
-  // <li class="IE" Id="IE">
-  // <span class="SE" id="SE">Vive en:</span> Guadalajara, Jalisco, México
-  // </li>
   document.getElementById("personal").setAttribute(
     "style",
     `
@@ -489,16 +484,18 @@ const IME = () => {
   <div class="Pers" id="Pers">
     <h1 class="TE" id="TE">Credenciales y Certificados</h1>
     <br>
-    <ul>
-    <li class="IE" Id="IE">
-    <span class="SE" id="SE">Cédula Profesional:</span> <a href="https://drive.google.com/file/d/1KeDb6hsSlbwfYnCRiQiFaxevyPxS1_iL/view?usp=sharing" style="text-decoration:none;"> PDF (click aqui)</a>
-    </li>
-    <br>
-    <li class="IE" Id="IE">
-        <span class="SE" id="SE">Certificados:</span> <a href="https://docs.google.com/presentation/d/10m6C3I4tpPXPsQXLXfohlTTTXDU1GEuI55C5nigS5ZM/edit?usp=sharing" style="text-decoration:none;"> PPT (click aqui)</a>
-        </li>
-        <br>
-    </ul>
+    <div class="Cont" id="Cont">
+      <a href="https://drive.google.com/file/d/1KeDb6hsSlbwfYnCRiQiFaxevyPxS1_iL/view?usp=sharing">
+        <div class="credCe" id="credCe" onmouseover="credHMI('credCe')" onmouseout="credHMO('credCe')">
+          <img src="./assets/Cédula.png" alt="Cédula Profesional" style="height: 60px; width: 60px;"/>
+        </div>
+      </a>
+      <a href="https://docs.google.com/presentation/d/1cuIkRagY2oC5VlMqHliZY6ILeqeVZSPnD3annDGfpXw/edit?usp=sharing">
+        <div class="credCo" id="credCo" onmouseover="credHMI('credCo')" onmouseout="credHMO('credCo')">
+          <img src="./assets/Certif.png" alt="PPT de Certificados" style="height: 60px; width: 60px;"/>
+        </div>
+      </a>
+      </div>
   </div>
   `;
   document.getElementById("Certi").setAttribute(
@@ -618,5 +615,29 @@ const IME = () => {
     font-family: "Fredoka", sans-serif;
   `
   );
-  //SE AÑADE LOS CUADRO DE HERRAMIENTAS Y SOFTWARES UTILIZADOS
+  //SE AÑADE EL CUADRO DE HERRAMIENTAS Y SOFTWARES UTILIZADOS
+};
+
+//onmouseover="credHMI()" onmouseout="credHMO()"
+const credHMI = (a) => {
+  document.getElementById(a).setAttribute(
+    "style",
+    `
+    border-radius: 10px;
+    border: 5px solid #10403b;
+    transition-property: border-radius, border;
+    transition-duration: 2s, 1s;
+  `
+  );
+};
+const credHMO = (a) => {
+  document.getElementById(a).setAttribute(
+    "style",
+    `
+    border-radius: 5px;
+    border: 1px solid #10403b;
+    transition-property: border-radius, border;
+    transition-duration: 2s, 1s;
+  `
+  );
 };
