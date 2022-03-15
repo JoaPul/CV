@@ -679,6 +679,13 @@ const IME = () => {
           <p class="IE" id="IE">.5 años</p>
         </div>
       </div>
+      <br>
+      <li class="IE" Id="IE">Soldadura con electrodo, MIG/MAG, oxiacetiléno</li>
+      <div class="cien" id="cien">
+        <div class="diez" id="diez">
+          <p class="IE" id="IE">.5 años</p>
+        </div>
+      </div>
     </ul>
   </div>
   `;
