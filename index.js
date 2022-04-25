@@ -249,6 +249,7 @@ const InicioWD = () => {
   //CAMBIO DE ACCION CUANDO SE PASA EL MOUSE
   document.getElementById("header").setAttribute("onmouseover", "HMI()");
   document.getElementById("header").setAttribute("onmouseout", "HMO()");
+  perf();
 };
 
 const Inicio = () => {
@@ -438,6 +439,7 @@ const perf2HMO = () => {
 //Perfil de IME
 const IME = () => {
   //TODO height
+  document.getElementById("regre").setAttribute("onclick", "InicioWD()");
   document.getElementById("todo").setAttribute(
     "style",
     `
@@ -1082,7 +1084,7 @@ const WD = () => {
     document.getElementById("PortTit").innerHTML = "<h1>Portafolio</h1>";
     document.getElementById("credit").innerHTML = "Autor de flechas: <a href='https://www.flaticon.es/iconos-gratis/flecha' title='flecha iconos' style='text-decoration: none;'>Flecha iconos creados por alta-icon - Flaticon</a>";
     document.getElementById("Portafol").innerHTML = ss;
-    document.getElementById("lenguajes").innerHTML = `<h1 class="Tec" id="Tec">Tecnologias Usadas</h1>
+    document.getElementById("lenguajes").innerHTML = `<h1 class="Tec" id="Tec">Tecnologías Usadas</h1>
     <br>
     <br>
       <div class="ContTeck" id="ContTeck">
