@@ -985,9 +985,11 @@ const WD = () => {
   <img src="./assets/yoBW.png" alt="profile picture" class="sobreMi" id="sobreMi" onmouseout="yoHMO()" />
   </div>
   <div class="contPort" id="contPort" style=" margin-bottom:30px; width:100%; display:flex; flex-direction: column; align-content:center; justify-content:center; align-items:center;"></div>
+  <br>
   <div class="lenguajes" id="lenguajes">
   
   </div>
+  <br>
   `;
   document.getElementById("aboutMe").setAttribute(
     "style",
@@ -1080,6 +1082,20 @@ const WD = () => {
     document.getElementById("PortTit").innerHTML = "<h1>Portafolio</h1>";
     document.getElementById("credit").innerHTML = "Autor de flechas: <a href='https://www.flaticon.es/iconos-gratis/flecha' title='flecha iconos' style='text-decoration: none;'>Flecha iconos creados por alta-icon - Flaticon</a>";
     document.getElementById("Portafol").innerHTML = ss;
+    document.getElementById("lenguajes").innerHTML = `<h1 class="Tec" id="Tec">Tecnologias Usadas</h1>
+    <br>
+    <br>
+      <div class="ContTeck" id="ContTeck">
+      <img src="./assets/HTML5.png" alt="HTML Logo" class="HTLM" id="HTML" style="height: 100px; width: 100px;">
+      <img src="./assets/CSS3.png" alt="CSS3 Logo" class="CSS" id="CSS" style="height: 100px; width: 100px;">
+      <img src="./assets/JS.png" alt="JAvaScript Logo" class="JS" id="JS" style="height: 100px; width: 100px;">
+      <img src="./assets/bots.png" alt="Bots Logo" class="Botstrap" id="Botstrap" style="height: 100px; width: 100px;">
+      <img src="./assets/nodejs.png" alt="NodeJS Logo" class="nodejs" id="nodejs" style="height: 100px; width: 100px;">
+      <img src="./assets/git-logo.png" alt="Git Logo" class="git" id="git" style="height: 100px; width: 100px;">
+      <img src="./assets/Python.png" alt="Python Logo" class="Py" id="Py" style="height: 100px; width: 100px;">
+      <img src="./assets/flask-logo.png" alt="Flask Logo" class="Flask" id="Flask" style="height: 100px; width: 100px;">
+      </div>
+    `;
   }, 3000);
 };
 

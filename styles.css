@@ -387,3 +387,27 @@ a {
   border: 5px solid #bfbfbf;
   box-shadow: 4px 4px 4px black, -4px -4px 4px gray;
 }
+
+/*Tecnologias*/
+.lenguajes {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.Tec {
+  width: auto;
+  font-family: "Fredoka";
+  font-size: 30px;
+  color: white;
+  border-bottom: 5px solid #127369;
+}
+.ContTeck {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+}
