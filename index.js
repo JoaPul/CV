@@ -29,7 +29,7 @@ let arr = [
 </div></a>`,
   `<a href="https://joapul.github.io/Pokedex/">
   <div class="Proy6" id="Proy6" >
-<div class="mask6" id="mask6"><h1>🕹️ Pockedex 🕹️</h1></div>
+<div class="mask6" id="mask6"><h1>🕹️ Pokedex 🕹️</h1></div>
 <img src="./assets/Pock.png" alt="proyecto" class="Pimg6" id="Pimg6">
 </div></a>`,
 ];
@@ -80,7 +80,9 @@ const HMO = () => {
 
 //INTRODUCE LOS BOTONES DE LOS PERFILES
 const perf = () => {
-  // document.getElementById("regre").setAttribute("style", "display:block;");
+  document.getElementById("regre").setAttribute("onmouseover", "InicioHMI()");
+  document.getElementById("regre").setAttribute("onmouseout", "InicioHMO()");
+  document.getElementById("regre").setAttribute("style", "z-index:4;");
   document.getElementById("perf").innerHTML = `
   <div class="perf1" id="perf1" onmouseover="perf1HMI()" onmouseout="perf1HMO()" onclick="IME()"></div>
   <div class="perf2" id="perf2" onmouseover="perf2HMI()" onmouseout="perf2HMO()" onclick="WD()"></div>
@@ -255,7 +257,9 @@ const InicioWD = () => {
 
 const Inicio = () => {
   //PONER EN PANTALLA
-  // document.getElementById("regre").setAttribute("style", "display:none;");
+  document.getElementById("regre").setAttribute("onmouseover", "");
+  document.getElementById("regre").setAttribute("onmouseout", "");
+  document.getElementById("regre").setAttribute("style", "z-index:-1;");
   document.getElementById("todo").setAttribute(
     "style",
     `
