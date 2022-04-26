@@ -80,6 +80,7 @@ const HMO = () => {
 
 //INTRODUCE LOS BOTONES DE LOS PERFILES
 const perf = () => {
+  // document.getElementById("regre").setAttribute("style", "display:block;");
   document.getElementById("perf").innerHTML = `
   <div class="perf1" id="perf1" onmouseover="perf1HMI()" onmouseout="perf1HMO()" onclick="IME()"></div>
   <div class="perf2" id="perf2" onmouseover="perf2HMI()" onmouseout="perf2HMO()" onclick="WD()"></div>
@@ -254,30 +255,7 @@ const InicioWD = () => {
 
 const Inicio = () => {
   //PONER EN PANTALLA
-  //   document.getElementById("pantalla").innerHTML = `
-  //   <div class="header" id="header" onmouseover="HMI()" onmouseout="HMO()" onclick="perf()">
-  //   <div class="nom" id="nom">
-  //     <div class="cent1" id="cent1">
-  //       <div class="imgcont" id="imgcont">
-  //         <img src="./assets/yo.png" alt="Foto de perfil" class="yo" id="yo" />
-  //       </div>
-  //       <div class="contac" id="contac"></div>
-  //     </div>
-  //     <div class="cent2" id="cent2">
-  //       <h1 class="nombre" id="nombre">JOAQUIN ARROYO</h1>
-  //     </div>
-  //   </div>
-  //   <div class="perf" id="perf"></div>
-  // </div>
-  // <div class="profile" id="profile"></div>
-  // <div class="expProj" id="expProj"></div>
-  // <div class="personal" id="personal"></div>
-  // <div class="skiToo" id="skiToo"></div>
-  // <div class="eduCur" id="eduCur"></div>
-  // <div class="Certi" id="Certi"></div>
-  // <div class="skills" id="skills"></div>
-  //   `;
-
+  // document.getElementById("regre").setAttribute("style", "display:none;");
   document.getElementById("todo").setAttribute(
     "style",
     `
