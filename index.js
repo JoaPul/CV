@@ -221,6 +221,14 @@ const InicioWD = () => {
   font-size: 50px;
   `
   );
+  if (screen.width < 960) {
+    document.getElementById("nombre").setAttribute(
+      "style",
+      `
+    font-size: 40px;
+    `
+    );
+  }
   document.getElementById("imgcont").setAttribute(
     "style",
     `
@@ -308,6 +316,14 @@ const Inicio = () => {
   font-size: 50px;
   `
   );
+  if (screen.width < 960) {
+    document.getElementById("nombre").setAttribute(
+      "style",
+      `
+    font-size: 40px;
+    `
+    );
+  }
   document.getElementById("imgcont").setAttribute(
     "style",
     `
@@ -519,7 +535,6 @@ const IME = () => {
     margin-top:30px;
     transition-property: height,width,border, box-shadow, margin-top;
     transition-duration: 2s,2s,2s,2s,1s;
-    
     `
   );
   document.getElementById("prof").setAttribute(
@@ -870,6 +885,194 @@ const IME = () => {
     font-family: "Fredoka", sans-serif;
   `
   );
+  //Responsive
+  if (screen.width < 969) {
+    document.getElementById("pantalla").setAttribute(
+      "style",
+      `
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding:20px;
+    gap:20px;
+    }
+  `
+    );
+    document.getElementById("nombre").setAttribute("style", "font-size:40px;");
+    document.getElementById("header").setAttribute(
+      "style",
+      `
+    width:95%;
+    background-color: #127369;
+    grid-row: 2;
+    grid-column: 1;
+    height:400px;
+    `
+    );
+    document.getElementById("profile").setAttribute(
+      "style",
+      `
+    width:95%; 
+    height:auto;
+    background-color:#8aa6a3;
+    border-radius:30px;
+    border:8px solid white;
+    box-shadow: 5px 5px 5px black,-5px -5px 5px gray;
+    transition-property: height,width,border, box-shadow, margin-top;
+    transition-duration: 2s,2s,2s,2s,1s;
+    `
+    );
+    document.getElementById("expProj").setAttribute(
+      "style",
+      `
+    width:95%;
+    height: auto;
+    background-color: #8aa6a3;
+    border-radius: 30px;
+    border: 8px solid white;
+    box-shadow: 5px 5px 5px black, -5px -5px 5px gray;
+    transition-property: height, width, border, box-shadow;
+    transition-duration: 2s, 2s, 2s, 2s;
+    color:white;
+    font-family: "Fredoka", sans-serif;
+    padding-right:10px;
+    `
+    );
+    document.getElementById("personal").setAttribute(
+      "style",
+      `
+    width:95%;
+    height: auto;
+    background-color: #8aa6a3;
+    border-radius: 30px;
+    border: 8px solid white;
+    box-shadow: 5px 5px 5px black, -5px -5px 5px gray;
+    transition-property: height, width, border, box-shadow;
+    transition-duration: 2s, 2s, 2s, 2s;
+    color:white;
+    font-family: "Fredoka", sans-serif;
+    `
+    );
+    document.getElementById("skiToo").setAttribute(
+      "style",
+      `
+    width:95%;
+    height: auto;
+    background-color: #8aa6a3;
+    border-radius: 30px;
+    border: 8px solid white;
+    box-shadow: 5px 5px 5px black, -5px -5px 5px gray;
+    transition-property: height, width, border, box-shadow;
+    transition-duration: 2s, 2s, 2s, 2s;
+    color: white;
+    font-family: "Fredoka", sans-serif;
+    `
+    );
+    document.getElementById("eduCur").setAttribute(
+      "style",
+      `
+    width:95%;
+    height: auto;
+    background-color: #8aa6a3;
+    border-radius: 30px;
+    border: 8px solid white;
+    box-shadow: 5px 5px 5px black, -5px -5px 5px gray;
+    transition-property: height, width, border, box-shadow;
+    transition-duration: 2s, 2s, 2s, 2s;
+    color:white;
+    font-family: "Fredoka", sans-serif;
+    `
+    );
+    document.getElementById("Certi").setAttribute(
+      "style",
+      `
+    width:95%;
+    height: auto;
+    background-color: #8aa6a3;
+    border-radius: 30px;
+    border: 8px solid white;
+    box-shadow: 5px 5px 5px black, -5px -5px 5px gray;
+    transition-property: height, width, border, box-shadow;
+    transition-duration: 2s, 2s, 2s, 2s;
+    color:white;
+    font-family: "Fredoka", sans-serif;
+    `
+    );
+    document.getElementById("skills").innerHTML = `
+    <div class="Pers" id="Pers">
+      <h1 class="TE" id="TE">Habilidades (uso en años)</h1>
+      <br>
+      <ul>
+        <br>
+        <li class="IE" Id="IE">Autocad 2D</li>
+        <div class="cien" id="cien">
+          <div class="cuarenta" id="cuarenta">
+            <p class="IE" id="IE">2</p>
+          </div>
+        </div>
+        <br>
+        <li class="IE" Id="IE">Solidworks</li>
+        <div class="cien" id="cien">
+          <div class="veinte" id="veinte">
+            <p class="IE" id="IE">1</p>
+          </div>
+        </div>
+        <br>
+        <li class="IE" Id="IE">Metodología TPM</li>
+        <div class="cien" id="cien">
+          <div class="veinte" id="veinte">
+            <p class="IE" id="IE">1</p>
+          </div>
+        </div>
+        <br>
+        <li class="IE" Id="IE">Matlab</li>
+        <div class="cien" id="cien">
+          <div class="diez" id="diez">
+            <p class="IE" id="IE">.5</p>
+          </div>
+        </div>
+        <br>
+        <li class="IE" Id="IE">Excel</li>
+        <div class="cien" id="cien">
+          <div class="ochenta" id="ochenta">
+            <p class="IE" id="IE">4</p>
+          </div>
+        </div>
+        <br>
+        <li class="IE" Id="IE">Autodesk Flow Design</li>
+        <div class="cien" id="cien">
+          <div class="diez" id="diez">
+            <p class="IE" id="IE">.5</p>
+          </div>
+        </div>
+        <br>
+        <li class="IE" Id="IE">Soldadura con electrodo, MIG/MAG, oxiacetiléno</li>
+        <div class="cien" id="cien">
+          <div class="diez" id="diez">
+            <p class="IE" id="IE">.5</p>
+          </div>
+        </div>
+      </ul>
+    </div>
+    `;
+    document.getElementById("skills").setAttribute(
+      "style",
+      `
+    width:95%;
+    height: auto;
+    background-color: #8aa6a3;
+    border-radius: 30px;
+    border: 8px solid white;
+    box-shadow: 5px 5px 5px black, -5px -5px 5px gray;
+    transition-property: height, width, border, box-shadow;
+    transition-duration: 2s, 2s, 2s, 2s;
+    color: white;
+    font-family: "Fredoka", sans-serif;
+    `
+    );
+  }
 };
 
 //onmouseover="credHMI()" onmouseout="credHMO()"
@@ -1001,7 +1204,13 @@ const WD = () => {
     border: 4px solid white;
   `
   );
-  // document.getElementById("Portafol").setAttribute();
+  let wi = 0;
+  if (screen.width < 969) {
+    wi = 380;
+  } else {
+    wi = 400;
+  }
+
   document.getElementById("style").innerHTML = ` 
   .WebDev {
     margin: 30px;
@@ -1028,7 +1237,7 @@ const WD = () => {
   
   .yoBW {
     margin: 30px;
-    width: 400px;
+    width: ${wi}px;
     height: 600px;
     border-radius: 10px;
     transition: box-shadow 2s;
@@ -1085,6 +1294,13 @@ const WD = () => {
 };
 
 const yoHMO = () => {
+  let wi = 0;
+  if (screen.width < 969) {
+    wi = 380;
+  } else {
+    wi = 400;
+  }
+
   if (!w) {
     document.getElementById("style").innerHTML = ` 
     .WebDev {
@@ -1099,7 +1315,7 @@ const yoHMO = () => {
     }
     .yoBW {
       margin: 30px;
-      width: 400px;
+      width: ${wi}px;
       height: 600px;
       border-radius: 10px;
       box-shadow: 14px 14px 0px 9px #127369, -5px -5px 0px 8px #8aa6a3;
