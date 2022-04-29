@@ -618,7 +618,7 @@ const IME = () => {
     padding-right:10px;
   `
   );
-  //SE AÑADE LOS CUADRO DE INFORMACION PERSONAL
+  //SE AÑADE LOS CUADRO DE INFORMACION PERSONAL <a href=mailto:joaquinarroyo@outlook.com?subject="Contacto">
   document.getElementById("personal").innerHTML = `
     <div class="Pers" id="Pers">
       <h1 class="TE" id="TE">Contacto</h1>
@@ -627,8 +627,8 @@ const IME = () => {
         <div class="credL" id="credL" onmouseover="credHMI('credL')" onmouseout="credHMO('credL')">
           <a href="https://www.linkedin.com/in/joaquin-arroyo"><img src="./assets/Lin.png" alt="Linkedin logo" style="height: 40px; width: 40px;"/></a>
         </div>
-        <div class="credE" id="credE" onmouseover="credHMI('credE')" onmouseout="credHMO('credE')">
-          <a href=mailto:joaquinarroyo@outlook.com?subject="Contacto"><img src="./assets/Mail.png" alt="Mail logo" href="" style="height: 40px; width: 40px;"/></a>
+        <div class="credE" id="credE" onmouseover="credHMI('credE')" onmouseout="credHMO('credE')" onclick="Contacto()">
+          <img src="./assets/Mail.png" alt="Mail logo" href="" style="height: 40px; width: 40px;"/></a>
         </div>
         <div class="credG" id="credG" onmouseover="credHMI('credG')" onmouseout="credHMO('credG')">
           <a href="https://github.com/JoaPul"><img src="./assets/Git.png" alt="Github logo" href="https://github.com/JoaPul" style="height: 40px; width: 40px;"/></a>
@@ -962,7 +962,7 @@ const WD = () => {
   <div id="aboutMe" class="abouMe">
     <p>¡Hola! Me alegra verte por aquí. <br><br>
     Me gusta aprender cosas nuevas y desarrollar proyectos con sentido social.<br><br>
-    Me encantaría que colaboremos juntos  <span id="Conta" class="Conta">¡Contáctame!<span>
+    Me encantaría que colaboremos juntos  <span id="Conta" class="Conta" onclick="Contacto()">¡Contáctame!<span>
     </p>
   </div>
   <div id="yoBW" class="yoBW" >
@@ -988,6 +988,7 @@ const WD = () => {
     "style",
     `
     color: red;
+    cursor:pointer;
   `
   );
   document.getElementById("sobreMi").setAttribute(
@@ -1166,4 +1167,37 @@ const Gofor = () => {
     `;
   }
   document.getElementById("Portafol").innerHTML = ss;
+};
+
+const Contacto = () => {
+  document.getElementById("contacta").innerHTML = `
+    <form class="form" action="https://formspree.io/f/moqrpnkk"
+    method="POST">
+    <div class="form_container">
+      <span class="X" onclick="SalirContacta()">&times;</span>
+      <h2 class="form_title">Contáctame</h2>
+      <div class="inp" id="inp">
+        <input type="text" class="form__input" placeholder="Nombre:" name="name">
+        <input type="email" class="form__input" placeholder="Email:" name="email">
+        <textarea class="form__input form__input--message" placeholder="Mensaje:" name="message"></textarea>
+        <input type="submit" value="Enviar" class="form__cta">
+      </div>
+      </div>
+    </form>
+  `;
+  document.getElementById("contacta").setAttribute(
+    "style",
+    `
+  z-index: 8;
+  `
+  );
+};
+
+const SalirContacta = () => {
+  document.getElementById("contacta").setAttribute(
+    "style",
+    `
+  z-index: -1;
+  `
+  );
 };
