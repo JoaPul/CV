@@ -571,7 +571,7 @@ const IME = () => {
       <ul>
         <li class="IE" Id="IE"> <span class="SE" id="SE"><u>(Marzo 2021 - Julio 2021)</u>
         HUAWEI | Gerente de adquisiciones de Proyectos. <br></span>
-        Encargado de llevar un control de recursos(materiales, personal y vehículos), primer contacto de los proveedores del proyecto. 
+        Encargado de llevar un control de recursos (materiales, personal y vehículos), primer contacto de los proveedores del proyecto. 
         </li>
         <br>
 
@@ -587,7 +587,7 @@ const IME = () => {
         Elaboración de calendarios de mantenimiento para cada máquina en las diferentes fabricas, 
         asignación de actividades de mtto. planeado a Técnicos, 
         elaboración de Reportes mensuales manejando KPIs establecidos, 
-        Participación en la aplicaión de metodologías TPM.
+        Participación en la aplicación de metodologías TPM.
         </li>
         <br>
 
@@ -600,14 +600,14 @@ const IME = () => {
 
         <li class="IE" Id="IE"><span class="SE" id="SE"><u>(Junio 2019 – Diciembre 2019)</u>
         DOCUDIGITAL DE OCCIDENTE SA DE CV | Interno en departamento Servicio Técnico</span><br>
-        Apoyo en Planeación/manejo de los Horarios y visitas que se les asignaban a los técnicos por día, 
+        Apoyo en planeación de los Horarios y visitas que se les asignaban a los técnicos por día, 
         llevar un control con reportes de técnicos en base de datos local, y llevar control de viáticos de técnicos. 
         </li>
         <br>
 
         <li class="IE" Id="IE"><span class="SE" id="SE"><u>(Enero 2019 – Mayo 2019)</u>
         AGENCIA FORD AV. AMERICAS  | Ayudante de mecánico automotriz</span><br>
-        Apoyo con mtto. correctivos y aplicar servicios(mtto. planeados), a autos asignados a técnico encargado.
+        Apoyo con mtto. correctivos y aplicar servicios (mtto. planeados), a autos asignados a técnico encargado.
         </li>
         <br>
 
